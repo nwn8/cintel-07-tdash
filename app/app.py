@@ -7,7 +7,7 @@ import palmerpenguins
 
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins dashboard", fillable=True)
+ui.page_opts(title="Penguins Data Dashboard" , fillable=True)
 
 
 with ui.sidebar(title="Filter controls"):
@@ -19,7 +19,7 @@ with ui.sidebar(title="Filter controls"):
         selected=["Adelie", "Gentoo", "Chinstrap"],
     )
     ui.hr()
-    ui.h6("Links")
+    ui.h6("Helpful Links")
     ui.a(
         "GitHub Source",
         href="https://github.com/denisecase/cintel-07-tdash",
