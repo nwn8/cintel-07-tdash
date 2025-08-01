@@ -106,6 +106,7 @@ with ui.layout_columns():
 #ui.include_css(app_dir / "styles.css")
 
 # reactive.calc is the funciont that will change the data when user selects 
+
 @reactive.calc
 def filtered_df():
     filt_df = df[df["species"].isin(input.species())]
