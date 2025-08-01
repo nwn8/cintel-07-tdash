@@ -10,6 +10,9 @@ df = palmerpenguins.load_penguins()
 ui.page_opts(title="Penguins Super Data Dashboard" , fillable=True)
 
 
+#Sidebar is here
+# ui.a creates a link, ui.input_slider creates a slider, ui.input_checkboxgroup creates check boxes
+
 with ui.sidebar(title="Filter controls"):
     ui.input_slider("mass", "Mass", 2000, 6000, 6000)
     ui.input_checkbox_group(
@@ -47,6 +50,7 @@ with ui.sidebar(title="Filter controls"):
         target="_blank",
     )
 
+# Main Page is here
 
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds")):
@@ -101,7 +105,7 @@ with ui.layout_columns():
 
 #ui.include_css(app_dir / "styles.css")
 
-
+# reactive.calc is the funciont that will change the data when user selects 
 @reactive.calc
 def filtered_df():
     filt_df = df[df["species"].isin(input.species())]
