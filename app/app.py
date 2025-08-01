@@ -7,7 +7,7 @@ import palmerpenguins
 
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins Data Dashboard" , fillable=True)
+ui.page_opts(title="Penguins Super Data Dashboard" , fillable=True)
 
 
 with ui.sidebar(title="Filter controls"):
